@@ -44,6 +44,7 @@ class RatingsAndReviews extends React.Component {
 
   submitReview(bodyParameters) {
     bodyParameters.product_id = this.props.product_id;
+    console.log(bodyParameters);
     axios({
       method: 'post',
       url: 'http://localhost:3001/reviews',

@@ -8,7 +8,6 @@ class ReviewList extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      // product_id: undefined,
       rating: '',
       summary: '',
       body: '',
@@ -43,6 +42,7 @@ class ReviewList extends React.Component {
     const target = event.target;
     const value = target.type === 'checkbox' ? target.checked : target.value;
     const name = target.name;
+    console.log(value);
     this.setState({[name]: value});
   }
 
