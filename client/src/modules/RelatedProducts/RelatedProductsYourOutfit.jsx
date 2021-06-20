@@ -18,7 +18,6 @@ class Related extends React.Component {
       relatedEnd: 5,
       outfitStart: 0,
       outfitEnd: 4,
-      outfitShown: [],
       starClick: false
     }
     this.getRelatedProducts = this.getRelatedProducts.bind(this);
@@ -32,9 +31,10 @@ class Related extends React.Component {
 
   componentDidMount() {
     const yourOutfit = localStorage.yourOutfit ? JSON.parse(localStorage.yourOutfit) : this.state.outfitList;
+    const carosel = helpers.getCaroselProducts(yourOutfit, 0, 4);
 
     this.getRelatedProducts(this.state.currentProduct.productDetails[0]);
-    this.setState({outfitList: yourOutfit});
+    this.setState({outfitList: yourOutfit, outfitCarosel: carosel});
   }
 
   relatedCardClick(productCardClicked) {
@@ -67,7 +67,9 @@ class Related extends React.Component {
 
     if (outfitIds.includes(currentProduct.productDetails[0]) === false) {
       newOutfit.push(currentProduct);
-      this.setState({outfitList: newOutfit});
+      let carosel = helpers.getCaroselProducts(newOutfit, this.state.outfitStart, this.state.outfitEnd);
+
+      this.setState({outfitList: newOutfit, outfitCarosel: carosel});
       localStorage.setItem('yourOutfit', JSON.stringify(newOutfit));
     } else {
       console.log('Already there!');
@@ -80,8 +82,9 @@ class Related extends React.Component {
     const productId = outfitIds.indexOf(outfitCardProduct.productDetails[0]);
 
     oldOutfit.splice(productId, 1);
+    let carosel = helpers.getCaroselProducts(oldOutfit, this.state.outfitStart, this.state.outfitEnd);
 
-    this.setState({outfitList: oldOutfit});
+    this.setState({outfitList: oldOutfit, outfitCarosel: carosel});
     localStorage.setItem('yourOutfit', JSON.stringify(oldOutfit));
   }
 

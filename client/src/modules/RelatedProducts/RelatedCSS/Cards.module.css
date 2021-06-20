@@ -1,13 +1,18 @@
+
 .card {
   background-color: gainsboro;
   border: 2px solid black;
-  padding: 3%;
-  margin: 5%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 70vh;
-  min-width: 27vh;
+  min-height: 60vh;
+  min-width: 25vh;
+  max-height: 60vh;
+  max-width: 25vh;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  padding: 10px;
+  transition: .5s;
+  margin: 1vh;
 }
 
 .card:hover{
@@ -18,13 +23,17 @@
 .pictureThumbnail {
   background-color: thistle;
   border: 2px solid black;
-  width: 80%;
-  height: 40%;
-  margin: 5%;
+  max-height: 27vh;
+  max-width: 21vh;
+  min-height: 27vh;
+  min-width: 21vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  align-self: center;
   position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .cardInfo {

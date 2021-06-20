@@ -5,28 +5,33 @@
   height: 100vh;
   top: 0;
   left: 0;
-  z-index: 1;
 }
 
 .box {
   position: relative;
-  width: 50%;
+  /* width: 50%; */
   margin: 0 auto;
   height: auto;
-  margin-top: 25vh;
+  margin-top: 15vh;
+  margin-left: 30vw;
+  margin-right: 30vw;
   background: white;
-  border-radius: 4px;
+  border-radius: 5%;
   padding: 20px;
-  border: 1px solid grey;
+  /* border: 1px solid grey; */
   overflow: auto;
+  box-shadow: 5px 5px 10px rgba(75, 58, 58, .5);
 }
 
 .close {
+  float: right;
   content: 'x';
   cursor: pointer;
   position: relative;
   /* right: calc(15% - 30px);
   top: calc(100vh - 85vh - 33px); */
+  /* left: 70vw;
+  top: 25vh; */
   background: lightgrey;
   width: 25px;
   height: 25px;
@@ -35,4 +40,67 @@
   text-align: center;
   border: 1px solid grey;
   font-size: 20px;
+}
+
+.content {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formelement {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.formelement > label {
+  margin-bottom: 5px;
+}
+
+.form input {
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+.form textarea {
+  resize: vertical;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+.form input, .form textarea {
+  padding: 13px;
+}
+
+.form input:focus, .form textarea:focus {
+  border-color: teal;
+}
+
+em {
+  margin-top: 3px;
+}
+
+.modalsubmit {
+  /* display: inline-block; */
+  margin-left: 30%;
+  margin-right: 30%;
+  background: none;
+  border: 1px solid black;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(75, 58, 58, .5);
+}
+
+.modalsubmit:hover {
+  border: 1px solid rgb(76, 138, 138);
+  background: rgb(76, 138, 138);
+  color: white;
+  /* box-shadow: 2px 2px 5px rgba(75, 58, 58, .5); */
 }

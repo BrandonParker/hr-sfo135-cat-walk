@@ -63,6 +63,7 @@ module.exports.reportAnswer = (options, res) => {
 module.exports.addQuestion = (options, res) => {
   axios(options)
     .then((response) => {
+      console.log(response.status);
       res.sendStatus(response.status)
     })
     .catch((err) => {
@@ -73,6 +74,7 @@ module.exports.addQuestion = (options, res) => {
 module.exports.addAnswer = (options, res) => {
   axios(options)
     .then((response) => {
+      console.log(response.status);
       res.sendStatus(response.status)
     })
     .catch((err) => {

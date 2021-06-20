@@ -1,0 +1,9 @@
+.questionlist {
+  display: grid;
+  /* border: 2px solid yellow; */
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+

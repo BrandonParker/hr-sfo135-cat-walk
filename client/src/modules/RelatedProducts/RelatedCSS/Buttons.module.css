@@ -3,15 +3,21 @@
   align-self: flex-end;
   justify-content: flex-end;
   align-items: flex-start;
-  color: rebeccapurple;
+  color: black;
 }
 
 .upperleft:hover {
-  color: forestgreen;
+  color: black;
+  position: relative;
+  top: -1px;
+  box-shadow: 0px 1px rgb(221, 221, 221);
 }
 
 .upperLeft:hover {
-  color: forestgreen;
+  color: black;
+  position: relative;
+  top: -1px;
+  box-shadow: 0px 1px rgb(221, 221, 221);
 }
 
 .radio {
@@ -32,5 +38,8 @@
 }
 
 .nav:hover {
-  color: forestgreen;
+  color: black;
+  position: relative;
+  top: -1px;
+  box-shadow: 0px 2px 2px 0px rgb(221, 221, 221);
 }

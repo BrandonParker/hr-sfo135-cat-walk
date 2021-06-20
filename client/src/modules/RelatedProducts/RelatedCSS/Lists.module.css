@@ -8,9 +8,8 @@
 }
 
 .list {
-  display: grid;
-  grid-template-columns: repeat(5, 20%);
-  gap: 3px;
-  grid-template-rows: repeat(1, auto);
+  display: flex;
+  justify-content: flex-start;
+  padding: 3vh;
+  overflow: scroll;
 }
-

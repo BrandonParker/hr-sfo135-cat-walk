@@ -1,12 +1,37 @@
-.answerslist {
+.answersbox {
+  margin-top: 18px;
   display: flex;
   flex-direction: row;
   flex-basis: 100%;
+  /* flex-wrap: wrap; */
 }
 
-.answersbox {
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 13px;
+  flex-basis: 100%;
+}
+
+.answerslist {
   /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
   white-space: pre-wrap;
+  /* margin-left: 5px; */
+  max-height: 35vh;
+  overflow-y: auto;
+}
+
+.answerloadbutton {
+  margin-top: 10px;
+  /* flex-basis: 100%; */
+  padding: 0;
+  /* border: 1px solid black; */
+  text-align: left;
+  font-weight: bold;
+}
+
+.answerloadbutton:hover {
+  text-decoration: underline;
 }

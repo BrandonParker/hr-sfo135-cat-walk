@@ -6,10 +6,13 @@ const productController = require('./controller/products.js');
 const questionController = require('./controller/questions.js');
 const ratingsController = require('./controller/ratings.js');
 const relatedListController = require('./controller/RelatedProductsController.js');
+const compression = require('compression');
 
 app.listen(port, (err = `connected to ${port}`) => {
   console.log(err);
 });
+
+app.use(compression());
 
 app.use(express.static(path.join(__dirname, '../client/dist')));
 app.use(express.json());

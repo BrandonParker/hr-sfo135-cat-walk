@@ -2,7 +2,20 @@
   border: 1px solid black;
   display: flex;
   flex-direction: row;
-  padding: 5px;
+  padding: 15px;
+  border-radius: 7px;
+  transition: box-shadow .2s;
+  margin-bottom: 8px;
+}
+
+.searchbox:hover {
+  box-shadow: 2px 2px 5px rgba(75, 58, 58, .5);
+}
+
+.searchbox:focus-within {
+  box-shadow: 2px 2px 5px rgba(75, 58, 58, .5);
+  /* box-shadow: 1 1 10px lightskyblue; */
+  /* border: 1px solid lightskyblue; */
 }
 
 .input {
@@ -10,6 +23,9 @@
   /* border: 1px solid red; */
   border: 0;
   flex-grow: 1;
+  outline: none;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .button {

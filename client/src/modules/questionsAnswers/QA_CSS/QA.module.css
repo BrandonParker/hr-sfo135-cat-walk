@@ -1,49 +1,44 @@
 .QuestionsAndAnswers {
-  font-family: Arial, Helvetica, sans-serif;
-  display: flex;
-  flex-direction: column;
+  font-family: 'Montserrat', Arial, sans-serif;
+  color:rgba(75, 58, 58);
+  display: block;
+  /* flex-direction: column; */
   /* justify-content: space-between; */
   margin: auto;
-  width: 70%;
-  border: 3px solid green;
+  width: 90%;
+  /* border: 3px solid green; */
   padding: 10px;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
+}
+
+.QuestionsAndAnswers > * {
+  /* border: 2px solid blue; */
 }
 
 button {
   cursor: pointer;
+  color: rgba(75, 58, 58);
 }
 
-.buttons {
+.questionbuttons {
   display: flex;
   flex-direction: row;
 }
 
-.buttons > * {
+.questionbuttons > * {
   background: none;
   border: 1px solid black;
   font-weight: bold;
   margin-right: 20px;
+  margin-top: 5px;
   padding: 15px;
+  border-radius: 5px;
 }
 
-.list {
-  /* border: 2px solid yellow; */
-  padding-bottom: 20px;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-}
-
-.formelement {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
-
-.form textarea {
-  resize: vertical;
+.questionbuttons > *:hover {
+  border: 1px solid rgb(76, 138, 138);
+  background: rgb(76, 138, 138);
+  color: white;
+  box-shadow: 1px 1px 5px rgba(75, 58, 58, .5);
 }

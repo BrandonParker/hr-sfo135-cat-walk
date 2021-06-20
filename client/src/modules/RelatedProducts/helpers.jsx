@@ -72,4 +72,14 @@ const caroselBeingClicked = (list) => {
   return caroselInfoArray;
 }
 
-export default {createCurrentObj, createCompareObj, getAllFeatures, compareFeatures, caroselBeingClicked}
+const getCaroselProducts = (productArr, start, end) => {
+  if (productArr.length < end) {
+    return productArr.slice();
+  }
+
+  const caroselArr = productArr.slice(start, end);
+
+  return caroselArr;
+}
+
+export default {createCurrentObj, createCompareObj, getAllFeatures, compareFeatures, caroselBeingClicked, getCaroselProducts}
