@@ -30,9 +30,9 @@
 }
 
 button {
-  font-size: small;
+  /* font-size: small;
   border: none;
-  background: none;
+  background: none; */
 }
 
 button:hover {

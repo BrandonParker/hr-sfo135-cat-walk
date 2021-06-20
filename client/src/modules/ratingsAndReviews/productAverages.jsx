@@ -42,12 +42,20 @@ const ProductAverages = function (props) {
         </div>
       )
     })
+    //&#11240;
     console.log(characteristicsArray);
     return (
       <div className={style.averages}>
         <h2 className={style.averageTitle}>RATINGS & REVIEWS</h2>
         <div className={style.averageRating}>{Math.round(averageRating * 10) / 10}</div>
-        <div className={style.averageStarsFill}>{stars}</div>
+        {/* <div className={style.averageStarsFill}>{stars}</div> */}
+        <div className={style.averageStarsFill}>
+          <div className={style.averageStar}>&#9733;</div>
+          <div className={style.averageStar}>&#9733;</div>
+          <div className={style.averageStar}>&#9733;</div>
+          <div className={style.averageStar}>&#9733;</div>
+          <div className={style.averageStar}>&#9734;</div>
+        </div>
         <div className={style.percentageRecommended}>{`${percentageRecommended}% of reviews recommend this product`}</div>
         <div className={style.starNumbers}>5 stars<div className={style.fiveStars}></div></div>
         <div className={style.starNumbers}>4 stars<div className={style.fourStars}></div></div>

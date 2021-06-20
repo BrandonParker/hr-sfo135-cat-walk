@@ -1,0 +1,34 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.overview {
+  display: grid;
+  grid-template-columns: 5% repeat(2, 1fr) 5%;
+  grid-template-rows: 5% repeat(2, 7%) 1fr;
+  width: 90%;
+  padding: 3vh;
+  margin: 5vh;
+  left: 50%;
+}
+
+img {
+  height: 80vh;
+  width: 65vh;
+  border: 2px solid black;
+  grid-column: 2/span 1;
+  left: 50%;
+}
+
+h1 {
+  grid-column: 3/span 1;
+  grid-row: 2/span 1;
+}
+
+span {
+  grid-column: 3/span 1;
+  grid-row: 3/span 1;
+}
