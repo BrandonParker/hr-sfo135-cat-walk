@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const port = 3001;
+const port = 3132;
 const productController = require('./controller/products.js');
 const questionController = require('./controller/questions.js');
 const ratingsController = require('./controller/ratings.js');
@@ -12,7 +12,7 @@ app.listen(port, (err = `connected to ${port}`) => {
   console.log(err);
 });
 
-app.use(compression());
+// app.use(compression());
 
 app.use(express.static(path.join(__dirname, '../client/dist')));
 app.use(express.json());
@@ -76,12 +76,24 @@ app.post('/related/productInfo', (req, res) => {
     })
 })
 
-app.get('/currentProduct/:id', (req, res) => {
+app.get('/currentProduct/:id', /*async*/ (req, res) => {
   const id = req.params.id;
 
-  const productInfo = relatedListController.relatedProductsController(id);
-  const saleAndImage = relatedListController.relatedPhotosController(id);
-  const ratingInfo = relatedListController.relatedRatingsController(id);
+  // try{
+  //   const productInfo = relatedListController.relatedProductsController(id);
+  //   const saleAndImage = relatedListController.relatedPhotosController(id);
+  //   const ratingInfo = relatedListController.relatedRatingsController(id);
+  
+  //   const productResponse = await productInfo();
+  //   const photoResponse = await saleAndImage();
+  //   const ratingResponse = await ratingInfo();
+  
+  //   return res.send([productResponse, photoResponse, ratingResponse])
+
+  // } catch (e) {
+  //   console.log(e)
+  //   return res.send([]);
+  // }
 
   Promise.resolve(productInfo)
     .then(productResponse => {

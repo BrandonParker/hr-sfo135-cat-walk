@@ -27,6 +27,7 @@ import style from './relatedCSS/productAverages.modules.css';
 const ProductAverages = function (props) {
   console.log(props);
   if (props.list.productReviews) {
+    //look into creating a star component
     const stars = new Array(5).fill('').map((empty, index) => <div key={`starAverage${index}`} className={style.averageStar}>&#9734;</div>);
     const ratingsArray = props.list.productReviews.map(review => review.rating);
     const averageRating = ratingsArray.map((rating) => Number.parseInt(rating)).reduce((total, next) => total + next) / ratingsArray.length;
